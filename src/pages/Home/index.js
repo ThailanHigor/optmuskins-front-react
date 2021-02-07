@@ -2,6 +2,7 @@ import './index.css';
 import Aside from '../../components/Aside'
 import MessageTopBox from '../../components/MessageTopBox'
 import RadialMenu from '../../components/RadialMenu'
+import KnivesMenu from '../../components/KnivesMenu'
 import Footer from '../../components/Footer'
 import { ContentRight, Container } from '../../globalStyled'
 
@@ -12,7 +13,8 @@ function Home() {
       <ContentRight>
         <Container>
           <MessageTopBox/>
-          <RadialMenu />
+          {/* <RadialMenu /> */}
+          <KnivesMenu />
         </Container>
         <Footer/>
       </ContentRight>

@@ -1,0 +1,60 @@
+.knives_menu__container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.knives_menu__container .content_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.knives_menu__container .card {
+    padding: 0 15px;
+    margin: 0 0 30px;
+    filter: drop-shadow(0 3px 7px rgba(14, 8, 18, 0.44));
+    cursor: pointer;
+}
+
+.knives_menu__container .card_inner {
+    padding: 35px;
+    box-sizing: border-box;
+    background-color: #20132a;
+    text-align: center;
+    transition: 0.6s cubic-bezier(0.21, 0.04, 0, 1.07);
+}
+
+.knives_menu__container .card:hover .card_inner{
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    transform: translateY(-10px);
+}
+
+.knives_menu__container .card_inner .category {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: #6b54b6;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.43em;
+    letter-spacing: 0.1em;
+    font-family: Rajdhani, sans-serif;
+    text-transform: uppercase;
+}
+
+.knives_menu__container .card_inner img {
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 0;
+    padding: 10px 0px;
+    max-width: 100%;
+}
+
+.knives_menu__container .card_inner .name {
+    font-size: 25px;
+    letter-spacing: 0;
+}
