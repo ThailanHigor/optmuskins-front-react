@@ -1,0 +1,20 @@
+.message-top-box__container{
+    padding-top: 55px !important;
+    padding-right: 1.9% !important;
+    padding-bottom: 23px !important;
+    padding-left: 1.9% !important;
+}
+
+.message-top-box__container .content{
+    width: 100%;
+}
+
+.message-top-box__container .content p{
+    font-family: Rajdhani, sans-serif;
+    font-weight: 700;
+    margin: 25px 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
