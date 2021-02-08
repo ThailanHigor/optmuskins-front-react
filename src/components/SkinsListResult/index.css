@@ -1,0 +1,101 @@
+.skins_list_result__container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.skins_list_result__container .content_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skins_list_result__container .card {
+    width: 25%;
+    float: left;
+}
+
+.skins_list_result__container .card_inner {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    margin: 20px;
+    height: auto;
+    padding: 20px;
+    box-shadow: -4px 5px 7px 1px rgb(114 40 226) !important;
+    cursor: pointer;
+}
+
+.skins_list_result__container .card_inner .content_info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 24px 21px 17px;
+    z-index: 50;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.skins_list_result__container .card_inner .category {
+    font-family: Rajdhani, sans-serif;
+    font-size: 17px;
+    line-height: 0.4em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 9px;
+    position: relative;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.skins_list_result__container .card_inner img {
+    display: block;
+    width: 100%;
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.12, 0.07, 0, 0.99), -webkit-transform 0.5s cubic-bezier(0.12, 0.07, 0, 0.99);
+}
+
+.skins_list_result__container .card_inner .name {
+    font-family: Rajdhani, sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.43em;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 9px;
+    position: relative;
+    color: #fff;
+    margin: 0 0 10px;
+    margin-left: 5px;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    margin: 0 0 10px;
+}
+
+.skins_list_result__container .card_inner .name::after{
+    content: "";
+    position: absolute;
+    bottom: calc(50% - 1px);
+    height: 3px;
+    width: 18px;
+    left: -30px;
+    background-color: #6b54b6;
+    transition: 0.3s ease;
+    transform-origin: left;
+    transform: skewX(15deg) scaleX(0);
+}
+
+.skins_list_result__container .card:hover .name::after{
+    transform: skewX(15deg) scaleX(1);
+}
+.skins_list_result__container .card:hover .name{
+    transform: translateX(30px);
+}
+
+.skins_list_result__container .card:hover img{
+    transform: scale(1.05);
+}

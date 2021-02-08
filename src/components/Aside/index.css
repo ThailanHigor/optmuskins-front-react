@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 380px;
+    width: 375px;
     height: 100%;
     padding: 0 0 10px;
     background-color: transparent;
@@ -33,7 +33,7 @@
 
 
 .aside__container .image_logo_link{
-    height: 211px;
+    height: 230px;
     max-width: 100%;
     display: block;
     position: relative;
@@ -92,7 +92,7 @@
 
 
 .aside__container .menu_container nav ul li a{
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 21px;
     padding: 21px 0;
@@ -107,7 +107,7 @@
 }
 
 .aside__container .menu_container nav ul li a span{
-    padding: 0 50px 0 45px;
+    padding: 0 0px 0 55px;
     position: relative;
     display: block;
     overflow: hidden;

@@ -1,10 +1,10 @@
 import './index.css';
 
-function MessageTopBox() {
+function MessageTopBox({message}) {
   return (
     <div className="message-top-box__container">
         <div className="content">
-            <p>primeiro, escolha a categoria da skin</p>
+            <p>{message}</p>
         </div>
     </div>
   );

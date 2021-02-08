@@ -14,7 +14,7 @@ footer .footer_container{
     width: 100%;
     vertical-align: middle;
     border-top: 0 solid #22152c;
-    padding: 25px 28px 22px !important;
+    padding: 22px 0px 22px 0px !important;
 }
 
 footer .footer_container::before{
@@ -36,7 +36,7 @@ footer .footer_container .content_left{
     box-sizing: border-box;
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
+    padding-left: 40px;
     padding-right: 15px;
 }
 

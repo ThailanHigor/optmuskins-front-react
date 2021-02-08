@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContentRight = styled.div `
-    padding-left: 380px;
+    padding-left: 377px;
     box-sizing: border-box;
     position: relative;
     margin-top: 0;
@@ -11,7 +11,6 @@ export const ContentRight = styled.div `
     align-items: center;
     flex-direction: column
 `;
-
 
 export const Container = styled.div `
     width: 100%;
@@ -25,3 +24,4 @@ export const H4 = styled.p `
     text-transform: uppercase;
     color: #fff;
 `
+
