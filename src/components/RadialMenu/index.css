@@ -186,12 +186,26 @@
     left: 79px;
     transform: rotate(30deg);
 }
+.radial-menu__container .slot-1 img{
+  transform: rotate(27deg);
+  position: absolute;
+  top: 6px;
+  right: 74px;
+}
+
 
 .radial-menu__container .slot-2 span{
     position: absolute;
     top: 16px;
     left: 79px;
     transform: rotate(-30deg);
+}
+
+.radial-menu__container .slot-2  img{
+  transform: rotate(330deg);
+  position: absolute;
+  top: 11px;
+  right: 78px;
 }
 
 .radial-menu__container .slot-3 span{
@@ -201,6 +215,13 @@
     transform: rotate(-90deg);
 }
 
+.radial-menu__container .slot-3 img{
+  transform: rotate(265deg);
+  position: absolute;
+  top: 15px;
+  right: 80px;
+}
+
 .radial-menu__container .slot-4 span{
     position: absolute;
     top: 12px;
@@ -208,11 +229,23 @@
     transform: rotate(210deg);
 }
 
+.radial-menu__container .slot-4 img{
+  transform: rotate(208deg);
+  position: absolute;
+  top: 20px;
+  right: 76px;
+}
 .radial-menu__container .slot-5 span{
     position: absolute;
     top: 13px;
     left: 88px;
     transform: rotate(150deg);
+}
+.radial-menu__container .slot-5 img{
+  transform: rotate(149deg);
+  position: absolute;
+  top: 21px;
+  right: 72px;
 }
 
 .radial-menu__container .slot-6 span{
@@ -220,5 +253,96 @@
     top: 13px;
     left: 85px;
     transform: rotate(91deg);
+}
+
+.radial-menu__container .slot-6 img{
+  transform: rotate(88deg);
+  position: absolute;
+  top: 15px;
+  right: 67px;
+}
+.radial-menu__container .arma-radial{
+  width: 50px;
+  height: auto;
+}
+
+
+.radial-menu__container .weapon-1 img{
+  transform: rotate(27deg);
+  position: absolute;
+  top: 6px;
+  right: 74px;
+}
+.radial-menu__container .weapon-1 span{
+  left: 76px;
+  top: 28px;
+  transform: rotate(30deg);
+  position: absolute;
+}
+
+
+.radial-menu__container .weapon-2 img{
+  transform: rotate(330deg);
+  position: absolute;
+  top: 11px;
+  right: 78px;
+}
+.radial-menu__container .weapon-2 span{
+  left: 90px;
+  top: 31px;
+  transform: rotate(-28deg);
+  position: absolute;
+}
+
+.radial-menu__container .weapon-3 img{
+  transform: rotate(265deg);
+  position: absolute;
+  top: 15px;
+  right: 80px;
+}
+.radial-menu__container .weapon-3 span{
+  left: 100px;
+  top: 12px;
+  transform: rotate(-90deg);
+  position: absolute;
+}
+
+.radial-menu__container .weapon-4 img{
+  transform: rotate(208deg);
+  position: absolute;
+  top: 20px;
+  right: 76px;
+}
+.radial-menu__container .weapon-4 span{
+  left: 102px;
+  top: -5px;
+  transform: rotate(208deg);
+  position: absolute;
+}
+
+.radial-menu__container .weapon-5 img{
+  transform: rotate(149deg);
+  position: absolute;
+  top: 21px;
+  right: 72px;
+}
+.radial-menu__container .weapon-5 span{
+  left: 75px;
+  top: -2px;
+  transform: rotate(150deg);
+  position: absolute;
+}
+
+.radial-menu__container .weapon-6 img{
+  transform: rotate(88deg);
+  position: absolute;
+  top: 15px;
+  right: 67px;
+}
+.radial-menu__container .weapon-6 span{
+  left: 64px;
+  top: 12px;
+  transform: rotate(91deg);
+  position: absolute;
 }
 

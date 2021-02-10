@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
 import './index.css';
-import imageCenter from "../../assets/images/logoRadialCTTR.png";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 class RadialMenu extends Component {
 
-    handleWeaponType = (weapon_id) =>{
+    handleWeaponType = (weapon_id) => {
         this.props.parentCallback(weapon_id);
     }
 
+    renderItens= (itens, typeRadial) => (
+        itens.map((item, i) => (
+            <li key={item.id}>
+                <a href="#" onClick={() => this.handleWeaponType(item.id)} className={`${typeRadial}-${i + 1} radial-first-step`}>
+                    {
+                        item.image != null
+                            ? <img className="arma-radial" src={`/assets/images/armasRadial/${item.image}`} alt=""></img>
+                            : ""
+                    }
+
+                    <span>{item.name}</span>
+                </a>
+            </li>
+        ))  
+    )
+
     render() {
+        var { itens, typeRadial } = this.props;
+        
         return (
             <div className="radial-menu__container">
                 <ul className="active">
-                    <li> <a href="#" className="slot-1 radial-first-step" onClick={() => this.handleWeaponType(1)} ><span>Pistolas</span></a> </li>
-                    <li><a href="#" className="slot-2 radial-first-step" onClick={() => this.handleWeaponType(2)}><span>Pesadas</span></a> </li>
-                    <li><a href="#" className="slot-3 radial-first-step" onClick={() => this.handleWeaponType(3)}><span>SMGs</span></a></li>
-                    <li><a href="#" className="slot-4 radial-first-step" onClick={() => this.handleWeaponType(4)}><span>Rifles</span></a></li>
-                    <li><a href="#" className="slot-5 radial-first-step" onClick={() => this.handleWeaponType(5)}><span>Luvas</span></a></li>
-                    <li><a href="#" className="slot-6 radial-first-step" onClick={() => this.handleWeaponType(6)}><span>Facas</span></a></li>
+                    { this.renderItens(itens, typeRadial) }
 
-                    <li className="close"> <img src={imageCenter} alt="logo-radial" /> </li>
+                    {
+                        itens.length < 6
+                            ? <li> <a href="#" className={`slot-6 radial-first-step`}></a> </li>
+                            : <></>
+                    }
+
+                    <li className="close"> <img src="/assets/images/logoRadialCTTR.png" alt="logo-radial" /> </li>
                 </ul>
             </div>
         );

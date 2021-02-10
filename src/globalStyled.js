@@ -25,3 +25,20 @@ export const H4 = styled.p `
     color: #fff;
 `
 
+
+export const Button = styled.button`
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    width: 120px;
+    height: 35px;
+    position: relative;
+    top: 114px;
+    left: 29px;
+    font-family: Rajdhani, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+`

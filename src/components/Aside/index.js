@@ -1,12 +1,11 @@
 import './index.css';
-import logo from '../../assets/images/logo.png'
 
 function Aside() {
   return (
     <div className="aside__container">
         <div className="logo_container">
             <a className="image_logo_link" href="/">
-                <img src={logo} alt="logo" />
+                <img src='/assets/images/logo.png' alt="logo" />
             </a>
         </div>
         <div className="menu_container">
