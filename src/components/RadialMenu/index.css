@@ -140,7 +140,7 @@
     border-radius: 50%;
     position: absolute;
     left: calc(50% - 18px);
-    top: calc(50% - 16px);
+    top: calc(50% - 18px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,6 +164,8 @@
   
   .radial-menu__container .close div{
     content: '';
+    justify-content: center;
+    display: flex;
   }
 
 .radial-menu__container ul.active {
@@ -346,3 +348,6 @@
   position: absolute;
 }
 
+.radial-menu__container .logo-team-radial{
+  cursor: pointer;
+}

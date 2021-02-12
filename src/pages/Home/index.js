@@ -28,6 +28,7 @@ class Home extends Component {
     skins: [],
     priceTable: null,
     flag_is_knife_list_style: false,
+    
   }
 
   async componentDidMount() {
@@ -43,10 +44,19 @@ class Home extends Component {
     this.setState({ weapons: response.data.weapons, step: 2 })
   }
 
-  handleCallbackWeapon = async (weapon_id) => {
-    this.setState({ weapon_selected: weapon_id });
-    const response = await api.post("getSkinsFromWeapon", { weaponSelectedId: weapon_id });
-    this.setState({ skins: response.data.skins, step: 3 })
+  handleCallbackWeapon = async (weapon_id, team_changed) => {
+    const {weapon_type_selected } = this.state;
+    if(team_changed){
+      this.setState({ team: team_changed })
+      const response = await api.post("getWeaponsByCategory", { weapon_type_id: weapon_type_selected, team_name: team_changed });
+      this.setState({ weapons: response.data.weapons, step: 2 })
+    }
+
+    if(weapon_id){
+      this.setState({ weapon_selected: weapon_id });
+      const response = await api.post("getSkinsFromWeapon", { weaponSelectedId: weapon_id });
+      this.setState({ skins: response.data.skins, step: 3 })
+    }
   }
 
   handleCallbackSkins = async (skin_id) => {
@@ -67,16 +77,17 @@ class Home extends Component {
   }
 
   checkAndShowCorrectSecondStep = (weapons) => {
-    if(this.state.flag_is_knife_list_style){
+    const { flag_is_knife_list_style, team } = this.state;
+    if(flag_is_knife_list_style){
       return <KnivesMenu itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} />
     }
-    return <RadialMenu itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} />;
+    return <RadialMenu itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} team={team} />;
   }
 
   changeSteps = () => {
     const { weapons_types, weapons, skins, priceTable } = this.state;
     switch (this.state.step) {
-      case 1: return <RadialMenu itens={weapons_types} parentCallback={this.handleCallbackWeaponType} typeRadial={"slot"} />;
+      case 1: return <RadialMenu itens={weapons_types} parentCallback={this.handleCallbackWeaponType} typeRadial={"slot"}  />;
       case 2: return this.checkAndShowCorrectSecondStep(weapons);
       case 3: return <SkinsListResult itens={skins} parentCallback={this.handleCallbackSkins} />;
       case 4: return <TablePrices data={priceTable} />;
