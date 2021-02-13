@@ -32,36 +32,34 @@ class Home extends Component {
   }
 
   async componentDidMount() {
-    const response = await api.post("weaponTypes");
-    this.setState({ weapons_types: response.data.weaponTypes })
+    const response = await api.post("weapon_types");
+    this.setState({ weapons_types: response.data.weapon_types })
   }
 
   handleCallbackWeaponType = async (weapon_type) => {
     this.setState({ weapon_type_selected: weapon_type })
-    if (weapon_type == 6) { this.setState({ flag_is_knife_list_style: true }) }
-
-    const response = await api.post("getWeaponsByCategory", { weapon_type_id: weapon_type, team_name: this.state.team });
-    this.setState({ weapons: response.data.weapons, step: 2 })
+    const response = await api.post("weapons", { weapon_type_id: weapon_type, team_name: this.state.team });
+    this.setState({ weapons: response.data.weapons, flag_is_knife_list_style: response.data.flag_knives,  step: 2 })
   }
 
   handleCallbackWeapon = async (weapon_id, team_changed) => {
     const {weapon_type_selected } = this.state;
     if(team_changed){
       this.setState({ team: team_changed })
-      const response = await api.post("getWeaponsByCategory", { weapon_type_id: weapon_type_selected, team_name: team_changed });
-      this.setState({ weapons: response.data.weapons, step: 2 })
+      const response = await api.post("weapons", { weapon_type_id: weapon_type_selected, team_name: team_changed });
+      this.setState({ weapons: response.data.weapons, flag_is_knife_list_style: response.data.flag_knives, step: 2 })
     }
 
     if(weapon_id){
       this.setState({ weapon_selected: weapon_id });
-      const response = await api.post("getSkinsFromWeapon", { weaponSelectedId: weapon_id });
+      const response = await api.post("skins", { weapon_id: weapon_id });
       this.setState({ skins: response.data.skins, step: 3 })
     }
   }
 
   handleCallbackSkins = async (skin_id) => {
     this.setState({ skin_selected: skin_id, loading: true });
-    const response = await api.post("getSkinInfo", { skin_selected_id: skin_id });
+    const response = await api.post("skins-price", { skin_selected_id: skin_id });
     this.setState({ priceTable: response.data, step: 4, loading: false });
   }
 
