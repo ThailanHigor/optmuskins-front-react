@@ -28,6 +28,7 @@ class Home extends Component {
     skins: [],
     priceTable: null,
     flag_is_knife_list_style: false,
+    message: "Pra começar, escolha a categoria da skin",
     
   }
 
@@ -39,7 +40,12 @@ class Home extends Component {
   handleCallbackWeaponType = async (weapon_type) => {
     this.setState({ weapon_type_selected: weapon_type })
     const response = await api.post("weapons", { weapon_type_id: weapon_type, team_name: this.state.team });
-    this.setState({ weapons: response.data.weapons, flag_is_knife_list_style: response.data.flag_knives,  step: 2 })
+    this.setState({ 
+      weapons: response.data.weapons, 
+      flag_is_knife_list_style: response.data.flag_knives,  
+      step: 2,
+      message: response.data.message
+     })
   }
 
   handleCallbackWeapon = async (weapon_id, team_changed) => {
@@ -47,20 +53,23 @@ class Home extends Component {
     if(team_changed){
       this.setState({ team: team_changed })
       const response = await api.post("weapons", { weapon_type_id: weapon_type_selected, team_name: team_changed });
-      this.setState({ weapons: response.data.weapons, flag_is_knife_list_style: response.data.flag_knives, step: 2 })
+      this.setState({ 
+        weapons: response.data.weapons, 
+        flag_is_knife_list_style: response.data.flag_knives, 
+        step: 2 })
     }
 
     if(weapon_id){
       this.setState({ weapon_selected: weapon_id });
       const response = await api.post("skins", { weapon_id: weapon_id });
-      this.setState({ skins: response.data.skins, step: 3 })
+      this.setState({ skins: response.data.skins, step: 3, message: "Agora é so escolher a skin!" })
     }
   }
 
   handleCallbackSkins = async (skin_id) => {
-    this.setState({ skin_selected: skin_id, loading: true });
+    this.setState({ skin_selected: skin_id, loading: true, message: "Boa! Pera ae que eu tô buscando os preços... " });
     const response = await api.post("skins-price", { skin_selected_id: skin_id });
-    this.setState({ priceTable: response.data, step: 4, loading: false });
+    this.setState({ priceTable: response.data, step: 4, loading: false, message: "Tá na mão. Se liga aí no comparativo dos preços!" });
   }
 
   backStep = () => {
@@ -70,12 +79,12 @@ class Home extends Component {
     this.setState({ step: stepBack });
     //changed to default style if the user comes back to first step
     if(stepBack == 1){
-      this.setState({ flag_is_knife_list_style: false }) 
+      this.setState({ flag_is_knife_list_style: false, message: "Pra começar, escolha a categoria da skin" }) 
     }
   }
 
   checkAndShowCorrectSecondStep = (weapons) => {
-    const { flag_is_knife_list_style, team } = this.state;
+    const { flag_is_knife_list_style, team, message } = this.state;
     if(flag_is_knife_list_style){
       return <KnivesMenu itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} />
     }
@@ -94,7 +103,7 @@ class Home extends Component {
   }
 
   render() {
-    const { weapon_type, weapon, step, loading } = this.state;
+    const { weapon_type, weapon, step, loading, message } = this.state;
     return (
       <>
         <Aside />
@@ -107,7 +116,7 @@ class Home extends Component {
                 : null
             }
 
-            <MessageTopBox message="primeiro, escolha a categoria da skin" />
+            <MessageTopBox message={message} />
             {
               loading
                 ? <Loading />

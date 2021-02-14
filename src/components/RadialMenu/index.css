@@ -351,3 +351,15 @@
 .radial-menu__container .logo-team-radial{
   cursor: pointer;
 }
+
+
+.radial-menu__container li img.change{
+  padding: 4px;
+  position: absolute;
+  left: 78px;
+  top: 21px;
+  width: 13px;
+  height: auto;
+  transform: skew(-30deg) rotate(-60deg);
+  cursor: pointer;
+}

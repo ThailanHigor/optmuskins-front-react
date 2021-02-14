@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import './index.css';
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 class RadialMenu extends Component {
     constructor() {
         super();
         this.state = {
-            isFlipped: false
+            isFlipped: false,
+            changed: false
         };
         this.handleChangeTeam = this.handleChangeTeam.bind(this);
     }
@@ -22,18 +22,32 @@ class RadialMenu extends Component {
         this.props.parentCallback(weapon_id);
     }
 
+    renderItem = (item, index, typeRadial)=> (
+        <a href="#" onClick={() => this.handleWeaponType(item.id)} className={`${typeRadial}-${index + 1} radial-first-step`}>
+            {
+                item.image != null
+                    ? <img className="arma-radial" src={`/assets/images/armasRadial/${item.image}`} alt=""></img>
+                    : ""
+            }
+            <span>{item.name}</span>
+        
+        </a>
+    )
     renderItens = (itens, typeRadial) => (
-        itens.map((item, i) => (
+        itens.map((item, index) => (
             <li key={item.id}>
-                <a href="#" onClick={() => this.handleWeaponType(item.id)} className={`${typeRadial}-${i + 1} radial-first-step`}>
-                    {
-                        item.image != null
-                            ? <img className="arma-radial" src={`/assets/images/armasRadial/${item.image}`} alt=""></img>
-                            : ""
-                    }
+                {
+                    (this.state.changed && item.variable && item.variable.id != 0) 
+                    ?  this.renderItem(item.variable, index, typeRadial)
+                    :  this.renderItem(item, index, typeRadial)
+                }
 
-                    <span>{item.name}</span>
-                </a>
+                {
+                    (item.variable && item.variable.id != 0) 
+                    ? <img class="change"  onClick={() => this.setState({changed: !this.state.changed})} src="/assets/icons/change.png" />
+                    : ""
+                }
+               
             </li>
         ))
     )
