@@ -11,6 +11,7 @@ export const ContentRight = styled.div`
     align-items: center;
     flex-direction: column
     min-height: calc(100vh - 116px);
+    flex-direction: column;
 `;
 
 export const Container = styled.div`

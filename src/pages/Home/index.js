@@ -162,8 +162,8 @@ class Home extends Component {
 
             }
           </Container>
-        </ContentRight>
         <Footer />
+        </ContentRight>
       </>
     );
   }
