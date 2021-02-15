@@ -135,7 +135,7 @@
   .radial-menu__container ul li.close {
     width: 35px;
     height: 35px;
-    background: white;
+    background: #ffffff3d;
     border-radius: 50%;
     position: absolute;
     left: calc(50% - 18px);

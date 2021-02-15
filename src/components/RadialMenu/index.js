@@ -75,8 +75,8 @@ class RadialMenu extends Component {
                 {this.renderFlipTeam(team)}
                 <p>Trocar time</p>
             </div>
-            <div className="option">
-                <img class="change" onClick={() => this.setState({changed: !this.state.changed})} src="/assets/icons/change.png" />
+            <div className="option"  onClick={() => this.setState({changed: !this.state.changed})} >
+                <img class="change" src="/assets/icons/change.png" />
                 <p>Arma alternativa</p>
             </div>
             </div>
@@ -98,7 +98,6 @@ class RadialMenu extends Component {
                     }
 
                     {this.renderFlipTeam(team)}
-
                 </ul>
             {
                 step > 1 
