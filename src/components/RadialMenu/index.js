@@ -51,10 +51,40 @@ class RadialMenu extends Component {
             </li>
         ))
     )
+    
+    renderFlipTeam = team  =>(
 
+            team
+            ?   <li className="close logo-team-radial"> 
+                    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                        <img onClick={() => this.handleChangeTeam("TR")} src={`/assets/images/logoRadialCT.png`} alt="logo-radial" /> 
+                        <img onClick={() => this.handleChangeTeam("CT")} src={`/assets/images/logoRadialTR.png`} alt="logo-radial" /> 
+                    </ReactCardFlip>
+                </li>
+            :   <li className="close logo-team-radial"> <img src="/assets/images/logoRadialCTTR.png" alt="logo-radial" /> </li>
+       
+    )
+
+
+    renderBoxRightOptions = team =>(
+        <div className="box_options__container">
+            <div className="content">
+            <p>Opções de Busca</p>
+            <hr/>
+            <div className="option">
+                {this.renderFlipTeam(team)}
+                <p>Trocar time</p>
+            </div>
+            <div className="option">
+                <img class="change" onClick={() => this.setState({changed: !this.state.changed})} src="/assets/icons/change.png" />
+                <p>Arma alternativa</p>
+            </div>
+            </div>
+        </div>
+    )
 
     render() {
-        var { itens, typeRadial, team } = this.props;
+        var { itens, typeRadial, team, step } = this.props;
 
         return (
             <div className="radial-menu__container">
@@ -66,18 +96,17 @@ class RadialMenu extends Component {
                             ? <li> <a href="#" className={`slot-6 radial-first-step`}></a> </li>
                             : <></>
                     }
-                    {
-                        team
-                            ? <li className="close logo-team-radial"> 
-                                <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                                    <img onClick={() => this.handleChangeTeam("TR")} src={`/assets/images/logoRadialCT.png`} alt="logo-radial" /> 
-                                    <img onClick={() => this.handleChangeTeam("CT")} src={`/assets/images/logoRadialTR.png`} alt="logo-radial" /> 
-                                </ReactCardFlip>
-                            </li>
-                            : <li className="close logo-team-radial"> <img src="/assets/images/logoRadialCTTR.png" alt="logo-radial" /> </li>
-                    }
+
+                    {this.renderFlipTeam(team)}
 
                 </ul>
+            {
+                step > 1 
+                ? this.renderBoxRightOptions(team)
+                : ""
+            }
+                
+
             </div>
         );
     }

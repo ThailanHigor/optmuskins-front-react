@@ -3,13 +3,13 @@
     top: 0;
     left: 0;
     width: 375px;
-    height: 100%;
     padding: 0 0 10px;
     background-color: transparent;
     outline: 0;
     z-index: 101;
     box-sizing: border-box;
     box-shadow: 0px 0 17px rgb(0 0 0 / 38%);
+    height: 100%;
 }
 
 .aside__container .logo_container{
