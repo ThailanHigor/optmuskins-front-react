@@ -20,11 +20,10 @@ export default class TablePrices extends Component {
     render(){
         var { data } = this.props;
         return (
-            <div className="table_prices_result__container">
-                <div className="content_info">
-                    <img src={`/assets/images/skins/${data.image}`} alt={data.name} />
-                    <h3 className="name">{data.name}</h3>
-    
+            <div className="table_prices_result__container">                
+                <div className="content_info">                  
+                    <img src={`/assets/images/skins/${data.image}`} alt={data.name} />                    
+                    <h3 className="name">{data.name}</h3>    
                 </div>
                 <div className="table_comparation">
                     <table>
