@@ -29,7 +29,7 @@ class RadialMenu extends Component {
                     ? <img className="arma-radial" src={`/assets/images/armasRadial/${item.image}`} alt=""></img>
                     : ""
             }
-            <span>{item.name}</span>
+            <span style={{top:item.topCSS, left:item.leftCSS }}>{item.name}</span>
         
         </a>
     )
