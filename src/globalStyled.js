@@ -24,7 +24,6 @@ export const Container = styled.div`
     min-height: calc(100vh - 116px);
     display: flex;
     flex-direction: column;
-    align-items: center;
 `;
 
 export const H4 = styled.p`
