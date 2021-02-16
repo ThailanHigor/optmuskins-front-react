@@ -31,5 +31,6 @@
     }
     .message-top-box__container{
         margin-bottom: 20px;
+        padding-top: 15px !important;
     }
 }

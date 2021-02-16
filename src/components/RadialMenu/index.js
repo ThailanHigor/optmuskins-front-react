@@ -93,7 +93,7 @@ class RadialMenu extends Component {
 
                     {
                         itens.length < 6
-                            ? <li> <a href="#" className={`slot-6 radial-first-step`}></a> </li>
+                            ? <li className="last-item-li"> <a href="#" className="slot-6 radial-first-step"></a> </li>
                             : <></>
                     }
 

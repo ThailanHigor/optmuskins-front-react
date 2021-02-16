@@ -65,6 +65,10 @@ export const NavigateButton = styled.img`
     top: 48%;
     left: 560px;
     cursor: pointer;
+
+    @media only screen and (max-width: 1024px){
+        display:none
+    }
 `
 export const NavigateSmallButton = styled.img`
     width: 33px;
