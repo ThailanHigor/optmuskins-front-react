@@ -16,4 +16,20 @@
     color: #fff;
     font-size: 35px;
     text-align: center;
+    line-height: 35px;
+}
+
+/* mobile */
+@media only screen and (max-width: 1024px){
+
+    .message-top-box__container .content p{
+        text-align: left;
+        border-left: 7px solid #5821a9;
+        padding-left: 12px;
+        padding-right: 20px;
+        font-size: 30px;
+    }
+    .message-top-box__container{
+        margin-bottom: 20px;
+    }
 }

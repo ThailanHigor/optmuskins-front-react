@@ -23,7 +23,7 @@ class RadialMenu extends Component {
     }
 
     renderItem = (item, index, typeRadial)=> (
-        <a href="#" onClick={() => this.handleWeaponType(item.id)} className={`${typeRadial}-${index + 1} radial-first-step`}>
+        <a href="#" onClick={() => this.handleWeaponType(item.id)} className={`${typeRadial}-${index + 1} radial-first-step itens-li`}>
             {
                 item.image != null
                     ? <img className="arma-radial" src={`/assets/images/armasRadial/${item.image}`} alt=""></img>

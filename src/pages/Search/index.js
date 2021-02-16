@@ -161,8 +161,8 @@ class Search extends Component {
 
             }
           </Container>
-        </ContentRight>
         <Footer />
+        </ContentRight>
       </>
     );
   }

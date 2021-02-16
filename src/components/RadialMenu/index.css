@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 80px 0px 120px 0px; */
 }
 
 .radial-menu__container ul {
@@ -437,4 +436,95 @@
   font-family: Rajdhani, sans-serif;
   font-size: 20px;
   font-weight: 600;
+}
+
+
+/* mobile */
+@media only screen and (max-width: 1024px){
+
+  .radial-menu__container, .radial-menu__container ul{
+    width: 100% !important;
+  }
+
+  .radial-menu__container ul.active{
+    position: initial;
+    transform: initial;
+    height: 100%;
+  }
+  .radial-menu__container ul li {
+    transform: initial !important;
+    position: initial;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .radial-menu__container ul li:nth-child(odd) {
+    border: 1px solid #fff;
+    border-left: 0;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  } 
+
+  .radial-menu__container ul li:nth-child(even) {
+    float: right;
+    border: 1px solid #fff;
+    border-right: 0;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .radial-menu__container ul li a{
+    transform: initial !important;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .radial-menu__container li:nth-child(odd) a span {
+    padding-right: 45px;
+    text-align: right;
+  }
+
+  .radial-menu__container li:nth-child(even) a span{
+    padding-left: 45px;
+    text-align: left;
+  }
+
+  .radial-menu__container .itens-li span{
+    position: initial;
+    transform: initial;
+    font-family: Rajdhani, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 28px;
+    width: 100%;
+  }
+  .radial-menu__container ul li a:hover span{
+    color: #461b82 !important;
+  }
+
+  .radial-menu__container .close.logo-team-radial{
+    background: #ffffffde;
+    width: 70px;
+    height: 70px;
+    border: 0px;
+    position: fixed;
+    bottom: 0px !important;
+    border-radius: 50%;
+    z-index: 9999;
+    right: 22px !important;
+    left: initial;
+    top: initial;
+    padding: 2px;
+  }
+  .radial-menu__container ul li.close img{
+    width: 100%;
+  }
 }

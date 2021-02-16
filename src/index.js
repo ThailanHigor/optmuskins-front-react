@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './pages/Home';
+import Search from './pages/Search';
 import reportWebVitals from './reportWebVitals';
 import "./global.css"
 
@@ -15,6 +16,9 @@ ReactDOM.render(
     <Router>
     <Switch>
       <Route exact path="/" component={Home}/>
+      <Route exact path="/quero-uma-skin-nova" component={Search}/>
+      <Route exact path="/search" component={Search}/>
+      <Route exact path="/compare-skins" component={Search}/>
     </Switch>
     </Router>
   </React.StrictMode>,
