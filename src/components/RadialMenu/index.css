@@ -464,6 +464,7 @@
     border-radius: 15px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    box-shadow: -9px 2px 2px 3px #5821a9;
   } 
 
   .radial-menu__container ul li:nth-child(even) {
@@ -473,6 +474,7 @@
     border-radius: 15px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    box-shadow: 7px 2px 2px 3px #5821a9;
   }
 
   .radial-menu__container ul li a{
