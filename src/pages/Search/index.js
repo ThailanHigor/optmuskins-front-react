@@ -113,7 +113,7 @@ class Search extends Component {
   checkAndShowCorrectSecondStep = (weapons) => {
     const { flag_is_knife_list_style, team, step } = this.state;
     if (flag_is_knife_list_style) {
-      return <KnivesMenu itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} />
+      return <KnivesMenu showSearch={true} itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} />
     }
     return <RadialMenu step={step} itens={weapons} parentCallback={this.handleCallbackWeapon} typeRadial={"weapon"} team={team} />;
   }
@@ -137,7 +137,7 @@ class Search extends Component {
         <ContentRight>
           <Container>
             {
-              (!loading && step > 1 && step < 3)
+              (!loading && (step > 1 && step < 3 && !flag_is_knife_list_style))
                 ? <NavigateButton src="/assets/icons/back.svg" onClick={() => this.backStep()} />
                 : null
             }

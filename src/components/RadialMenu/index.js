@@ -44,7 +44,7 @@ class RadialMenu extends Component {
 
                 {
                     (item.variable && item.variable.id != 0) 
-                    ? <img class="change"  onClick={() => this.setState({changed: !this.state.changed})} src="/assets/icons/change.png" />
+                    ? <img className="change"  onClick={() => this.setState({changed: !this.state.changed})} src="/assets/icons/change.png" />
                     : ""
                 }
                
@@ -76,7 +76,7 @@ class RadialMenu extends Component {
                 <p>Trocar time</p>
             </div>
             <div className="option"  onClick={() => this.setState({changed: !this.state.changed})} >
-                <img class="change" src="/assets/icons/change.png" />
+                <img className="change" src="/assets/icons/change.png" />
                 <p>Arma alternativa</p>
             </div>
             </div>

@@ -27,8 +27,8 @@ const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 function Card(props) {
   const [propsa, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   return (
-    <div class="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-      <animated.div class="card1" style={{ transform: propsa.xy.interpolate(trans1),  backgroundImage: `url(${props.image})` }} />
+    <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+      <animated.div className="card1" style={{ transform: propsa.xy.interpolate(trans1),  backgroundImage: `url(${props.image})` }} />
     </div>
   )
 }

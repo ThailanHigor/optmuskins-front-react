@@ -1,11 +1,35 @@
 import React, {Component} from 'react';
 import "./index.css";
 import { H4 } from '../../globalStyled';
+import SearchInput from '../SearchInput'
 
 export default class KnivesMenu extends Component{
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            originalItens: this.props.itens,
+            itens: this.props.itens,
+            showSearch: this.props.showSearch
+        }
+    }
 
     handleWeaponType = (weapon_id) => {
         this.props.parentCallback(weapon_id);
+    }
+
+    filterItens = search => {
+        console.log(search)
+        const { originalItens } = this.state;
+
+        let itensFiltered = []
+        originalItens.map((item, i) => {
+            if(item.name.toLowerCase().includes(search)){
+                itensFiltered.push(item)
+            }
+        })
+
+        this.setState({itens: itensFiltered})
     }
 
     renderItens= itens => (
@@ -28,10 +52,16 @@ export default class KnivesMenu extends Component{
 
 
     render(){
-        var { itens } = this.props;
+        var { itens, showSearch } = this.state;
         
         return(
             <div className="knives_menu__container">
+                {
+                    showSearch
+                    ?  <SearchInput parentCallback={this.filterItens}  />
+                    : ""
+                }
+               
                 <div className="content_list">
                     {this.renderItens(itens)}
                 </div>

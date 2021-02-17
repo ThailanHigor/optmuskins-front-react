@@ -8,6 +8,7 @@
 .knives_menu__container .content_list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 25px;
 }
 
 .knives_menu__container .card {
