@@ -1,5 +1,5 @@
 .table_prices_result__container{
-  
+    padding: 0px 45px;
 }
 
 .table_prices_result__container .content_info{
@@ -126,4 +126,99 @@
 
 .table_prices_result__container .table_comparation tbody tr th{
     text-align: left;
+}
+
+/* mobile */
+@media only screen and (max-width: 1024px){
+    .table_prices_result__container{
+        padding: 0px 15px;
+    }
+    
+    .table_prices_result__container .table_comparation tbody tr td.disabled-column{
+        display: none;
+    }
+
+    .table_prices_result__container .table_comparation tbody tr td.active{
+        display: block !important;
+    }
+
+    .table_prices_result__container .table_comparation .coluna-logo{
+        border-radius: 50%;
+        width: 30px;
+        cursor: pointer;
+        bottom: 113px;
+        position: fixed;
+        z-index: 9999;
+        background: #21132ce8;
+        width: 60px;
+        height: 58px;
+        border: 2px solid #fff;
+        padding: 10px;
+        box-shadow: -5px 4px 10px 0px #000000d4;
+        top: initial;
+        left: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .table_prices_result__container .table_comparation .coluna-logo.active{
+        background-color:  #5821a9e6;
+    }
+    
+    .table_prices_result__container .table_comparation .coluna-logo img{
+        width: 50px;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .table_prices_result__container .table_comparation .coluna-logo:nth-child(2){
+        bottom: 108px;
+    }
+
+    .table_prices_result__container .table_comparation .coluna-logo:nth-child(3){
+        bottom: 190px;
+    }
+    .table_prices_result__container .table_comparation .coluna-logo:nth-child(4){
+        bottom: 264px;
+    }
+    .table_prices_result__container .table_comparation .coluna-logo:nth-child(5){
+        bottom: 340px;
+    }
+    
+    .table_prices_result__container .table_comparation table{
+        font-size: 19px;
+    }
+    .table_prices_result__container .table_comparation table th{
+        padding: 0px !important;
+    }
+
+    .table_prices_result__container .table_comparation tr th{
+        font-size: 18px;
+    }
+    .table_prices_result__container .table_comparation tr td a{
+        width: 100%;
+    }
+    .table_prices_result__container .content_info img{
+        width: 300px;
+    }
+    .table_prices_result__container .content_info{
+        min-height: 350px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .table_prices_result__container .table_comparation table{
+        font-size: 14px;
+    }
+    .table_prices_result__container .table_comparation tr th{
+        font-size: 14px;
+    }
+    .table_prices_result__container .table_comparation tbody tr th{
+        width: 180px;
+    }
+   
+
 }

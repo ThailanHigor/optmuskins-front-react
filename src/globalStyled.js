@@ -66,7 +66,21 @@ export const NavigateButton = styled.img`
     cursor: pointer;
 
     @media only screen and (max-width: 1024px){
-        display:none
+        border-radius: 50%;
+        width: 30px;
+        left: 20px;
+        cursor: pointer;
+        bottom: 36px;
+        position: fixed;
+        z-index: 9999;
+        background: #ffffffde;
+        width: 25px;
+        height: 25px;
+        background: #21132c;
+        border: 2px solid #fff;
+        padding: 10px;
+        box-shadow: -5px 4px 10px 0px #000000d4;
+        top: initial;
     }
 `
 export const NavigateSmallButton = styled.img`
@@ -76,4 +90,22 @@ export const NavigateSmallButton = styled.img`
     top: 72px;
     left: 400px;
     cursor: pointer;
+
+    @media only screen and (max-width: 1024px){
+        border-radius: 50%;
+        width: 30px;
+        left: 20px;
+        cursor: pointer;
+        bottom: 36px;
+        position: fixed;
+        z-index: 9999;
+        background: #ffffffde;
+        width: 25px;
+        height: 25px;
+        background: #21132c;
+        border: 2px solid #fff;
+        padding: 10px;
+        box-shadow: -5px 4px 10px 0px #000000d4;
+        top: initial;
+    }
 `

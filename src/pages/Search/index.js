@@ -150,7 +150,7 @@ class Search extends Component {
             <MessageTopBox message={message} />
             {
               (!loading && step > 2)
-                ?   <Button onClick={() => this.setState({step: 1})}>Recomeçar Busca</Button>
+                ?   <Button onClick={() => this.setState({step: 1})} style={{margin: "15px auto"}}>Recomeçar Busca</Button>
                 : null
             }
           

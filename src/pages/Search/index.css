@@ -1,0 +1,10 @@
+.back-button-mobile{
+    display: none;
+}
+
+/* mobile */
+@media only screen and (max-width: 1024px){
+    .back-button-mobile{
+        display: block;
+    }
+}
