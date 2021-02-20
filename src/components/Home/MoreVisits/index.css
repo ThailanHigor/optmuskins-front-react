@@ -1,0 +1,96 @@
+.top5_list_container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.top5_list_container .content_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    justify-content: space-around;
+}
+
+.top5_list_container .card {
+    width: 250px;
+    height: 300px;
+    padding: 0 15px;
+    margin: 0 0 30px;
+    filter: drop-shadow(0 3px 4px #7228e2ad);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.top5_list_container .card_inner {
+    padding: 35px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #20132a;
+    text-align: center;
+    transition: 0.6s cubic-bezier(0.21, 0.04, 0, 1.07);
+}
+
+.top5_list_container .card:hover .card_inner{
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    transform: translateY(-10px);
+}
+
+.top5_list_container .category {
+    display: flex;
+    vertical-align: top;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.43em;
+    letter-spacing: 0.1em;
+    font-family: Rajdhani, sans-serif;
+    text-transform: uppercase;
+    background: red;
+    width: 101px;
+    position: absolute;
+    transform: rotate(
+45deg
+);
+    right: -8px;
+    top: 15px;
+    -webkit-clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 21px, 100% 100%, 0px 100%,23% 0, 0 calc(100% - 25px));
+    clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0px 100%,26px 0, 0 calc(100% - 35px));
+    transition: 0.6s cubic-bezier(0.21, 0.04, 0, 1.07);
+    justify-content: center;
+    z-index: 99;
+}
+
+.top5_list_container .card:hover .category{
+    top: 5px;
+}
+
+.top5_list_container .card_inner .categoryHot{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: #fd1e00;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.43em;
+    letter-spacing: 0.1em;
+    font-family: Rajdhani, sans-serif;
+    text-transform: uppercase;
+}
+
+.top5_list_container .card_inner img {
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    padding: 10px 0px;
+    max-width: 100%;
+    filter: drop-shadow(2px 8px 30px #5821a9);
+}
+
+.top5_list_container .card_inner .name {
+    font-size: 25px;
+    letter-spacing: 0;
+}

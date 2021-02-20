@@ -34,19 +34,13 @@ export default class KnivesMenu extends Component{
 
     renderItens= itens => (
         itens.map((item, i) => (
-            <a className="card" key={item.id}  onClick={() => this.handleWeaponType(item.id)} href={`/compare-skins/${item.id}`}>
-                <div  className="card_inner">
-                    {this.props.RemoveCategory
-                        ? ""
-                        : <span className="category">Facas</span>
-                    }
-                    {this.props.changePath 
-                      ? <img src={`/assets/images/skins/${item.image}`} alt={item.name} /> 
-                      : <img src={`/assets/images/armasRadial/${item.image}`} alt={item.name} /> 
-                    }
+            <div className="card" key={item.id} onClick={() => this.handleWeaponType(item.id)}>
+                <div  className="card_inner">           
+                    <span className="category">Facas</span>
+                    <img src={`/assets/images/armasRadial/${item.image}`} alt={item.name} /> 
                     <H4>{item.name}</H4>
                 </div>
-            </a>
+            </div>
         ))  
     )
 
