@@ -1,6 +1,49 @@
 
 .Home__container .message-top-box__container .content p {
-text-align: left;
-border-left: 7px solid #5821a9;
-padding-left: 12px;
+    text-align: left;
+    border-left: 7px solid #5821a9;
+    padding-left: 12px;
 }
+
+.Home__container .knives_menu__container .content_list{
+    justify-content: space-between;
+}
+
+.banner_mid__container{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.banner_mid__container .banner_mid_content{
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_mid__container .banner_mid_content a{
+    background-color: #fd3147;
+    height: 65px;
+    width: 250px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s all;
+    border: 2px solid transparent;
+    clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));
+}
+
+.banner_mid__container .banner_mid_content a:hover{
+    background-color: #6b54b6
+}
+
+.banner_mid__container .banner_mid_content a span{
+    font-family: Rajdhani,sans-serif;
+    font-size: 17px;
+    line-height: 2em;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color:#fff
+}
+
