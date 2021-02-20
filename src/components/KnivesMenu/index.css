@@ -1,8 +1,8 @@
 .knives_menu__container {
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 3.9%;
+    padding-right: 3.9%;
 }
 
 .knives_menu__container .content_list {

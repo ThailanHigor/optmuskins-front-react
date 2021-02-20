@@ -12,6 +12,8 @@
 .banner_mid__container{
     padding-left: 25px;
     padding-right: 25px;
+    margin-top: 100px;
+    margin-bottom: -50px;
 }
 .banner_mid__container .banner_mid_content{
     height: 340px;
@@ -21,8 +23,8 @@
 }
 
 .banner_mid__container .banner_mid_content a{
-    background-color: #fd3147;
-    height: 65px;
+    background-color: #ffffff;
+    height: 75px;
     width: 250px;
     text-decoration: none;
     display: flex;
@@ -30,20 +32,21 @@
     align-items: center;
     transition: 0.4s all;
     border: 2px solid transparent;
-    clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));
+    clip-path: polygon(0 0,calc(100% - 50px) 0,100% 20px,100% 100%,50px 100%,0 calc(100% - 20px));
+    margin-top: 100px;
 }
 
 .banner_mid__container .banner_mid_content a:hover{
-    background-color: #6b54b6
+    background-color: #09f4fc;
 }
 
 .banner_mid__container .banner_mid_content a span{
     font-family: Rajdhani,sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 2em;
     font-weight: 600;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color:#fff
+    color:rgb(0, 0, 0)
 }
 

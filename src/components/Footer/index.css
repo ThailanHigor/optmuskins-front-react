@@ -15,9 +15,10 @@ footer .footer_container{
     vertical-align: middle;
     border-top: 0 solid #22152c;
     padding: 22px 0px 22px 0px !important;
+    clip-path: polygon(51% 40%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 
-footer .footer_container::before{
+/* footer .footer_container::before{
     content: "";
     display: block;
     background-color: #150f1a;
@@ -28,7 +29,7 @@ footer .footer_container::before{
     left: 0;
     -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
-}
+} */
 
 footer .footer_container .content_left{
     float: left;
