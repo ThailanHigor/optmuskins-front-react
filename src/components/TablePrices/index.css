@@ -19,6 +19,7 @@
     width: 30%;
     height: auto;
     max-width: 100%;
+    filter: drop-shadow(0px 8px 61px #6b54b6);
 }
 .table_prices_result__container .content_info .name{
     margin: 10px 0px;

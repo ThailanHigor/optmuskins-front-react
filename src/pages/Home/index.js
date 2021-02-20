@@ -70,7 +70,7 @@ class Home extends Component {
           <Container className="Home__container">
             <Banner />
             <MessageTopBox message={'Skins mais procuradas no momento'} />
-            <KnivesMenu itens={this.state.hot_weapons} changePath={true} Hot={true} />
+            <KnivesMenu itens={this.state.hot_weapons} changePath={true} RemoveCategory={true} />
 
             <div className="banner_mid__container">
               <div className="banner_mid_content" style={{backgroundImage: 'url("/assets/images/bg-mid.png")'}}>

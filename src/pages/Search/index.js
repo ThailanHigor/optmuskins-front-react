@@ -34,10 +34,17 @@ class Search extends Component {
     priceTable: null,
     flag_is_knife_list_style: false,
     message: "Pra começar, escolha a categoria da skin",
-
+    user_came_from_home: false
   }
 
   async componentDidMount() {
+    
+    if(this.props.match.params.skinId){
+      this.handleCallbackSkins(this.props.match.params.skinId)
+      this.setState({ user_came_from_home:true})
+      return true;
+    }
+
     const response = await api.post("weapon_types");
     this.setState({ weapons_types: response.data.weapon_types, loading: false })
   }
@@ -130,7 +137,7 @@ class Search extends Component {
   }
 
   render() {
-    const { weapon_type, weapon, step, loading, message, flag_is_knife_list_style } = this.state;
+    const { weapon_type, weapon, step, loading, message, flag_is_knife_list_style, user_came_from_home } = this.state;
     return (
       <>
         <Aside />
@@ -142,7 +149,7 @@ class Search extends Component {
                 : null
             }
             {
-              ((!loading && step > 2) || (!loading && step > 1 && flag_is_knife_list_style))
+              (!user_came_from_home  &&  (!loading && step > 2) || (!loading && step > 1 && flag_is_knife_list_style))
                 ? <NavigateSmallButton src="/assets/icons/back.svg" onClick={() => this.backStep()} />
                 : null
             }
@@ -150,7 +157,7 @@ class Search extends Component {
             <MessageTopBox message={message} />
             {
               (!loading && step > 2)
-                ?   <Button onClick={() => this.setState({step: 1})} style={{margin: "15px auto"}}>Recomeçar Busca</Button>
+                ?   <Button href="/compare-skins" style={{margin: "15px auto"}}>Recomeçar Busca</Button>
                 : null
             }
           

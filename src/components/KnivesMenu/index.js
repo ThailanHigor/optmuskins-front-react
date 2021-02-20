@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Link } from 'react';
 import "./index.css";
 import { H4 } from '../../globalStyled';
 import SearchInput from '../SearchInput'
@@ -34,11 +34,11 @@ export default class KnivesMenu extends Component{
 
     renderItens= itens => (
         itens.map((item, i) => (
-            <div className="card" key={item.id}  onClick={() => this.handleWeaponType(item.id)}>
-                <div className="card_inner">
-                    {this.props.Hot
-                    ?   <span className="categoryHot">Hot</span>
-                    : <span className="category">Facas</span>
+            <a className="card" key={item.id}  onClick={() => this.handleWeaponType(item.id)} href={`/compare-skins/${item.id}`}>
+                <div  className="card_inner">
+                    {this.props.RemoveCategory
+                        ? ""
+                        : <span className="category">Facas</span>
                     }
                     {this.props.changePath 
                       ? <img src={`/assets/images/skins/${item.image}`} alt={item.name} /> 
@@ -46,7 +46,7 @@ export default class KnivesMenu extends Component{
                     }
                     <H4>{item.name}</H4>
                 </div>
-            </div>
+            </a>
         ))  
     )
 

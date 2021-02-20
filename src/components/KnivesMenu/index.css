@@ -18,6 +18,7 @@
     margin: 0 0 30px;
     filter: drop-shadow(0 3px 4px #7228e2ad);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .knives_menu__container .card_inner {

@@ -36,7 +36,7 @@ export const H4 = styled.p`
     
 `
 
-export const Button = styled.button`
+export const Button = styled.a`
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
@@ -50,6 +50,10 @@ export const Button = styled.button`
     cursor: pointer;
     transition: 0.5s cubic-bezier(0.42, 0, 1, 1.05);
     margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
 
     :hover{
         background: #fff;

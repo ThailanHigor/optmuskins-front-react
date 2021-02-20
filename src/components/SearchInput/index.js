@@ -15,7 +15,7 @@ export default class SearchInput extends Component {
     render() {
         return (
             <div className="search_input__container">
-                <input value={this.state.search} placeholder="Buscar por nome da skin" onChange={this.handleInput.bind(this)} />
+                <input value={this.state.search} placeholder="Buscar pelo nome da skin" onChange={this.handleInput.bind(this)} />
                 <img src="/assets/icons/search.svg" />
             </div>
         );
