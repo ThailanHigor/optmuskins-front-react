@@ -68,3 +68,23 @@ footer .footer_container p{
     text-transform: uppercase;
 }
 
+
+/* mobile */
+@media only screen and (max-width: 1024px){
+
+    footer .footer_container{
+        clip-path: none;
+        flex-direction: column;
+        display: flex;
+    }
+    footer .footer_container .content_left, footer .footer_container .content_right{
+        width: 100%;
+        text-align: center;
+        padding: 0px 25px;
+    }
+
+    footer .footer_container .content_left p, footer .footer_container .content_right p{
+        text-align: center;
+    }
+}
+
