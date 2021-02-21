@@ -1,10 +1,20 @@
 import './index.css';
 import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu'
+import { useLocation } from "react-router-dom";
 
 export default class Aside extends Component {
+    
+    state={
+        route: ""
+    }
 
+    componentDidMount() {
+        this.setState({route: window.location.pathname })
+    }
+    
     render() {
+        const { route } = this.state;
         return (
             <div className="aside__container">
                 <div className="content_desktop">
@@ -16,11 +26,11 @@ export default class Aside extends Component {
                     <div className="menu_container">
                         <nav>
                             <ul>
-                                <li className="active">
+                                <li className={route == "/" ? 'active' : ''}>
                                     <a href="/"><span>Home</span></a>
                                 </li>
-                                <li>
-                                    <a href="/compare-skins"><span>Buscar Skins</span></a>
+                                <li className={route.includes("/compare-skins") ? 'active' : ''} >
+                                    <a href="/compare-skins"><span>Comparar Skins</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -42,8 +52,8 @@ export default class Aside extends Component {
                     </div>
 
                     <Menu right isOpen={ false } width={ '100%' }>                                         
-                        <a className="active" href="/"><span>Home</span></a>
-                        <a href="/compare-skins"><span>Buscar Skins</span></a>
+                        <a className={route == "/" ? 'active' : ''} href="/"><span>Home</span></a>
+                        <a className={route.includes("/compare-skins") ? 'active' : ''}  href="/compare-skins"><span>Comparar Skins</span></a>
                     </Menu>
                 </div>
 
