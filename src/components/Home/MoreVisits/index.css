@@ -1,8 +1,8 @@
 .top5_list_container {
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .top5_list_container .content_list {
@@ -46,7 +46,7 @@
     letter-spacing: 0.1em;
     font-family: Rajdhani, sans-serif;
     text-transform: uppercase;
-    background: red;
+    background: #5821a9;
     width: 101px;
     position: absolute;
     transform: rotate(
@@ -54,8 +54,8 @@
 );
     right: -8px;
     top: 15px;
-    -webkit-clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 21px, 100% 100%, 0px 100%,23% 0, 0 calc(100% - 25px));
-    clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0px 100%,26px 0, 0 calc(100% - 35px));
+  
+    clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0px 100%,26px 0, 0 0);
     transition: 0.6s cubic-bezier(0.21, 0.04, 0, 1.07);
     justify-content: center;
     z-index: 99;
@@ -94,3 +94,55 @@
     font-size: 25px;
     letter-spacing: 0;
 }
+.message-top5__container{
+    padding-top: 90px !important;
+    padding: 0px 15px;
+}
+
+.message-top5__container .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-top5__container .content p{
+    font-family: Rajdhani, sans-serif;
+    font-weight: 700;
+    margin: 25px 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.message-top5__container .content p {
+    text-align: left;
+    border-left: 7px solid #5821a9;
+    padding-left: 12px;
+}
+
+/* mobile */
+@media only screen and (max-width: 1024px){
+
+    .message-top5__container .content p{
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 0px;
+        font-size: 26px;
+        width: 100%;
+        border-left: initial
+    }
+    .message-top5__container{
+        margin-bottom: 20px;
+        padding-top: 15px !important;
+    }
+    .message-top5__container .content{
+        flex-direction: column;
+    }
+    .top5_list_container{
+        padding: 0px;
+    }
+}
+
