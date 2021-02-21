@@ -1,0 +1,21 @@
+.privacy__container .privacy__inner{
+    margin: 0px 50px;
+}
+
+.privacy__container .privacy__inner h3{
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.privacy__container .privacy__inner p{
+    font-family: Rajdhani, sans-serif;
+    font-size: 18px;
+}
+
+.privacy__container .privacy__inner b{
+    font-weight: bold;
+}
+
+.privacy__container .privacy__inner a{
+    color: #bab9bb;
+}

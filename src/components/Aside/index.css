@@ -117,6 +117,31 @@
 .content_mobile{
     display: none;
 }
+
+.aside__container .aside_footer{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0px;
+}
+
+.aside__container .aside_footer a{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    font-family: Rajdhani, sans-serif;
+    color: #ffffffc2;
+    padding: 3px 0px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* mobile */
 @media only screen and (max-width: 1024px){
 

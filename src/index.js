@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './pages/Home';
 import Search from './pages/Search';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Contact from './pages/Contact';
 import reportWebVitals from './reportWebVitals';
 import "./global.css"
 
@@ -18,6 +21,9 @@ ReactDOM.render(
       <Route exact path="/" component={Home}/>
       <Route exact path="/compare-skins" component={Search}/>
       <Route exact path="/compare-skins/:skinId" component={Search}/>
+      <Route exact path="/politica-de-privacidade" component={PrivacyPolicy}/>
+      <Route exact path="/termos-de-uso" component={TermsOfService}/>
+      <Route exact path="/contato" component={Contact}/>
     </Switch>
     </Router>
   </React.StrictMode>,

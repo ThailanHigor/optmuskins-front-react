@@ -1,0 +1,21 @@
+.terms__container .terms__inner{
+    margin: 0px 50px;
+}
+
+.terms__container .terms__inner h3{
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.terms__container .terms__inner p{
+    font-family: Rajdhani, sans-serif;
+    font-size: 18px;
+}
+
+.terms__container .terms__inner b{
+    font-weight: bold;
+}
+
+.terms__container .terms__inner a{
+    color: #bab9bb;
+}
