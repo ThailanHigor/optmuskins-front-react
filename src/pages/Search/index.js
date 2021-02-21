@@ -92,8 +92,11 @@ class Search extends Component {
 
   handleCallbackSkins = async (skin_id) => {
     this.setState({ skin_selected: skin_id, loading: true, message: "Boa! Pera ae que eu tô buscando os preços... " });
+    api.put("skins", {"skin_id": skin_id});
     const response = await api.post("skins-price", { skin_selected_id: skin_id });
     this.setState({ priceTable: response.data, step: 4, loading: false, message: "Tá na mão. Se liga aí no comparativo dos preços!" });
+    
+    //update de views of skin in database
   }
 
   backStep = () => {

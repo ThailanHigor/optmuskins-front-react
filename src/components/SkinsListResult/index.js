@@ -42,7 +42,7 @@ class SkinsListResult extends Component {
                                 <div className="card_inner">
                                     <img src={`/assets/images/skins/${item.image}`} alt={item.name} />
                                     <div className="content_info">
-                                        <span className="category">{item.category}</span>
+                                        <span className="category">{item.weapon.name}</span>
                                         <span className="name">{item.name}</span>
                                     </div>
                                 </div>

@@ -48,7 +48,7 @@ export const Button = styled.a`
     text-transform: uppercase;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.5s cubic-bezier(0.42, 0, 1, 1.05);
+    transition: 0.3s cubic-bezier(0.42, 0, 1, 1.05);
     margin: 10px 0px;
     display: flex;
     justify-content: center;

@@ -16,8 +16,6 @@ ReactDOM.render(
     <Router>
     <Switch>
       <Route exact path="/" component={Home}/>
-      <Route exact path="/quero-uma-skin-nova" component={Search}/>
-      <Route exact path="/search" component={Search}/>
       <Route exact path="/compare-skins" component={Search}/>
       <Route exact path="/compare-skins/:skinId" component={Search}/>
     </Switch>

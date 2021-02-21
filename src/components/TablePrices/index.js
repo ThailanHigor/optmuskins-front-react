@@ -47,7 +47,7 @@ export default class TablePrices extends Component {
             <div className="table_prices_result__container">
                 <div className="content_info">
                     <img src={`/assets/images/skins/${data.image}`} alt={data.name} />
-                    <h3 className="name">{data.name}</h3>
+                    <h3 className="name">{data.weapon} - {data.name}</h3>
                 </div>
                 <div className="table_comparation">
                     <table>
