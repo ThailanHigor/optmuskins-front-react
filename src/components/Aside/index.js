@@ -27,13 +27,13 @@ export default class Aside extends Component {
                         <nav>
                             <ul>
                                 <li className={route == "/" ? 'active' : ''}>
-                                    <a href="/"><span>Home</span></a>
+                                    <a href="/"><span>Início</span></a>
                                 </li>
                                 <li className={route.includes("/compare-skins") ? 'active' : ''} >
                                     <a href="/compare-skins"><span>Comparar Skins</span></a>
                                 </li>
                                 <li className={route.includes("/contato") ? 'active' : ''} >
-                                    <a href="/compare-skins"><span>Contato</span></a>
+                                    <a href="/contato"><span>Contato</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -59,7 +59,7 @@ export default class Aside extends Component {
                     </div>
 
                     <Menu right isOpen={ false } width={ '100%' }>                                         
-                        <a className={route == "/" ? 'active' : ''} href="/"><span>Home</span></a>
+                        <a className={route == "/" ? 'active' : ''} href="/"><span>Início</span></a>
                         <a className={route.includes("/compare-skins") ? 'active' : ''}  href="/compare-skins"><span>Comparar Skins</span></a>
                         <a className={route == "/politica-de-privacidade" ? 'active' : ''} href="/politica-de-privacidade"><span>Política de Privacidade</span></a>
                         <a className={route == "/termos-de-uso" ? 'active' : ''} href="/termos-de-uso"><span>Termos de Uso</span></a>
