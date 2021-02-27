@@ -42,7 +42,7 @@
 .aside__container .image_logo_link img{
     display: block;
     height: auto;
-    width: 150px;
+    width:  300px;
 }
 
 .aside__container .menu_container nav{
@@ -165,7 +165,7 @@
     }
 
     .aside__container  .content_mobile .image_logo_link img{
-        width: 80px;
+        width: 120px;
     }
 
     .aside__container  .content_mobile nav{
