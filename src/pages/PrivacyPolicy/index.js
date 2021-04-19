@@ -13,8 +13,8 @@ import './index.css';
 
 export default class PrivacyPolicy extends Component {
     state = {
-        name: "OptmuSkins",
-        email: "email@email.com.br"
+        name: "Skin Matcher",
+        email: "devthailan@gmail.com.br"
     }
     render() {
         return (
