@@ -26,7 +26,7 @@ export default class TermsOfService extends Component {
                         <div className="terms__inner">
                             <h3>1. Do objeto</h3>
                             
-                            <p>Intitula-se neste termo, as lojas virtuais NeshaStore, BleikStore, CSGO Store, Steam como  <b>Sites Terceiros</b>.</p>
+                            <p>Intitula-se neste termo, as lojas virtuais ProSkins, BleikStore, CSGO Store, Steam como  <b>Sites Terceiros</b>.</p>
                             <br/>
                             <p>
                                 A plataforma caracteriza-se pela prestação do seguinte serviço:
@@ -38,7 +38,7 @@ export default class TermsOfService extends Component {
                                 A ação é realizada em tempo de execução, portanto nenhum dado de site terceiro é armazenado em nossa base de dados.
                             </p>
                             <br />
-                            <p>A {this.state.name} não possui qualquer tipo de vínculo com a NeshaStore, BleikStore, CSGO Store, Steam, Valve Corporation e suas afiliadas. </p>                           
+                            <p>A {this.state.name} não possui qualquer tipo de vínculo com a ProSkins, BleikStore, CSGO Store, Steam, Valve Corporation e suas afiliadas. </p>                           
                             <br/>
 
                             <p><b>

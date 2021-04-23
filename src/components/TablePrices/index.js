@@ -25,7 +25,7 @@ export default class TablePrices extends Component {
                 </td>
 
                 <td className={this.state.tab_mobile == 2 ? "active" : "disabled-column"}>
-                    <a href={item.LinkNesha} className={item.PriceNesha != "-" ? "activable" : ""} target="_blank">{item.PriceNesha}
+                    <a href={item.LinkProSkins} className={item.PriceProSkins != "-" ? "activable" : ""} target="_blank">{item.PriceProSkins}
                         <img src="/assets/icons/goto.svg" alt="bleik" />
                     </a>
                 </td>
@@ -61,7 +61,7 @@ export default class TablePrices extends Component {
                                     <img src='/assets/images/csgostore.png' className="image-logo" alt="csgostore" />
                                 </th>
                                 <th scope="col" onClick={() => this.setState({ tab_mobile: 2 })} className={tab_mobile == 2 ? "coluna-logo active" : "coluna-logo"}>
-                                    <img src='/assets/images/neshastore.png' className="image-logo" alt="nesha" />
+                                    <img src='/assets/images/proskins.png' className="image-logo" alt="proskins" />
                                 </th>
                                 <th scope="col" onClick={() => this.setState({ tab_mobile: 3 })} className={tab_mobile == 3 ? "coluna-logo active" : "coluna-logo"}>
                                     <img src='/assets/images/steam.svg' className="image-logo" alt="steam" />
